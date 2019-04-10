@@ -45,5 +45,5 @@ function (Y, M, ctl, k = NULL, eta = NULL, include.intercept = TRUE,
         newY = ((1/apply(M, 2, sum)) * t(M)) %*% newY
     if (!return.info) 
         return(newY)
-    else return(list(newY = newY, M = M, fullalpha = fullalpha))
+    else return(list(newY = newY, M = M, fullalpha = fullalpha, W = W))
 }
